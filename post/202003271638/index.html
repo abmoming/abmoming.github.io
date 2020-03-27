@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        git-learn - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> No one can make me lose unless I don&#39;t want to win! </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/github.jpg" />
+        </div>
+        <div class="name">
+            <i>Moming</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git"><span class="toc-text">git</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、git下载连接"><span class="toc-text">1、git下载连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、git安装步骤"><span class="toc-text">2、git安装步骤</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、初始化git仓库"><span class="toc-text">3、初始化git仓库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、初始化操作"><span class="toc-text">1、初始化操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、注意："><span class="toc-text">2、注意：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、设置签名"><span class="toc-text">3、设置签名</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、git版本控制操作"><span class="toc-text">4、git版本控制操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、添加提交以及查看状态操作"><span class="toc-text">1、添加提交以及查看状态操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、查看当前仓库状态"><span class="toc-text">1、查看当前仓库状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、新建文件，再次查看仓库状态"><span class="toc-text">2、新建文件，再次查看仓库状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、将文件修改添加到暂存区中"><span class="toc-text">3、将文件修改添加到暂存区中</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4、再次查看仓库状态"><span class="toc-text">4、再次查看仓库状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5、将文件从暂存区提交到本地仓库"><span class="toc-text">5、将文件从暂存区提交到本地仓库</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、将文件从缓存区中移除"><span class="toc-text">2、将文件从缓存区中移除</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、修改成功提交后的文件情况"><span class="toc-text">3、修改成功提交后的文件情况</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、修改文件后，查看状态"><span class="toc-text">1、修改文件后，查看状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、将修改后的文件添加到暂存区，查看状态"><span class="toc-text">2、将修改后的文件添加到暂存区，查看状态</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、将暂存区的文件提交"><span class="toc-text">3、将暂存区的文件提交</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、版本的前进和后退"><span class="toc-text">4、版本的前进和后退</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、查看历史版本"><span class="toc-text">1、查看历史版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、前进后退版本"><span class="toc-text">2、前进后退版本</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、reset命令的三个参数对比"><span class="toc-text">3、reset命令的三个参数对比</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、永久删除已提交文件后找回"><span class="toc-text">5、永久删除已提交文件后找回</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、删除已提交文件"><span class="toc-text">1、删除已提交文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、文件找回："><span class="toc-text">2、文件找回：</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、比较文件差异"><span class="toc-text">6、比较文件差异</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、分支管理"><span class="toc-text">7、分支管理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、什么是分支？"><span class="toc-text">1、什么是分支？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、分支的好处？"><span class="toc-text">2、分支的好处？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、分支操作"><span class="toc-text">3、分支操作</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、git基本原理"><span class="toc-text">5、git基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、哈希"><span class="toc-text">1、哈希</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、Git保存版本的机制"><span class="toc-text">2、Git保存版本的机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、集中式版本控制工具的文件管理机制"><span class="toc-text">1、集中式版本控制工具的文件管理机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、Git-的文件管理机制"><span class="toc-text">2、Git 的文件管理机制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、Git-的-”提交对象“"><span class="toc-text">3、Git 的 ”提交对象“</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、Git分支管理机制"><span class="toc-text">3、Git分支管理机制</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、分支的创建"><span class="toc-text">1、分支的创建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、分支的切换"><span class="toc-text">2、分支的切换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4、知识点小结："><span class="toc-text">4、知识点小结：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Git-本地库连接远程库"><span class="toc-text">6、Git 本地库连接远程库</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、代码托管流程图"><span class="toc-text">1、代码托管流程图</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、创建本地库"><span class="toc-text">2、创建本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、创建远程库"><span class="toc-text">3、创建远程库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、在本地创建远程库地址别名"><span class="toc-text">4、在本地创建远程库地址别名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、推送操作"><span class="toc-text">5、推送操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、克隆操作"><span class="toc-text">6、克隆操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、邀请组员加入团队"><span class="toc-text">7、邀请组员加入团队</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8、远程库修改的拉取（pull-fetch-merge）"><span class="toc-text">8、远程库修改的拉取（pull &#x3D; fetch + merge）</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、fetch"><span class="toc-text">1、fetch</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、merge"><span class="toc-text">2、merge</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、直接pull"><span class="toc-text">3、直接pull</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9、协同开发时的冲突解决"><span class="toc-text">9、协同开发时的冲突解决</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、产生冲突"><span class="toc-text">1、产生冲突</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、解决冲突（与解决分支冲突一样）"><span class="toc-text">2、解决冲突（与解决分支冲突一样）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10、跨团队协作操作演示"><span class="toc-text">10、跨团队协作操作演示</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、SSH免密码登录"><span class="toc-text">7、SSH免密码登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8、Eclipse中Git插件使用"><span class="toc-text">8、Eclipse中Git插件使用</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、简介"><span class="toc-text">1、简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、Eclipse中把工程初始化为本地库"><span class="toc-text">2、Eclipse中把工程初始化为本地库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、在Eclipse中设置本地库范围签名"><span class="toc-text">3、在Eclipse中设置本地库范围签名</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、Eclipse中Git图标的介绍"><span class="toc-text">4、Eclipse中Git图标的介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、Eclipse特定文件介绍以及为什么要忽略他们"><span class="toc-text">5、Eclipse特定文件介绍以及为什么要忽略他们</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、Eclipse-中忽略文件"><span class="toc-text">1、Eclipse 中忽略文件</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、为什么要忽略Eclipse-特定文件呢？"><span class="toc-text">2、为什么要忽略Eclipse 特定文件呢？</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、忽略Eclipse-中的特定文件"><span class="toc-text">6、忽略Eclipse 中的特定文件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、查看git官方忽略机制文档"><span class="toc-text">1、查看git官方忽略机制文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、创建一个后缀名为-gitignore-的文档文件"><span class="toc-text">2、创建一个后缀名为 .gitignore 的文档文件</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、Eclipse-中本地库基本操作"><span class="toc-text">7、Eclipse 中本地库基本操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8、将本地工程推送到远程库"><span class="toc-text">8、将本地工程推送到远程库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9、将远程库的工程克隆到本地"><span class="toc-text">9、将远程库的工程克隆到本地</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、Oxygen-Eclipse-克隆工程操作（高版本）"><span class="toc-text">1、Oxygen Eclipse 克隆工程操作（高版本）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、Kepler-Eclipse-克隆工程操作（低版本）"><span class="toc-text">2、Kepler Eclipse 克隆工程操作（低版本）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10、在Eclipse中解决冲突"><span class="toc-text">10、在Eclipse中解决冲突</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9、Git-工作流"><span class="toc-text">9、Git 工作流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、概念"><span class="toc-text">1、概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、分类"><span class="toc-text">2、分类</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、集中式工作流"><span class="toc-text">1、集中式工作流</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、GitFlow-工作流"><span class="toc-text">2、GitFlow 工作流</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、Forking-工作流"><span class="toc-text">3、Forking 工作流</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、工作流举例"><span class="toc-text">3、工作流举例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、分支实战操作"><span class="toc-text">4、分支实战操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、组员操作："><span class="toc-text">1、组员操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1、创建分支"><span class="toc-text">1、创建分支</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2、提交到本地库"><span class="toc-text">2、提交到本地库</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3、推送分支hot-fix到远程库"><span class="toc-text">3、推送分支hot_fix到远程库</span></a></li></ol></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、组长操作："><span class="toc-text">2、组长操作：</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#1、pull"><span class="toc-text">1、pull</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#2、切换分支审查代码"><span class="toc-text">2、切换分支审查代码</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#3、切换回master"><span class="toc-text">3、切换回master</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#4、合并分支"><span class="toc-text">4、合并分支</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#5、选择要合并的分支"><span class="toc-text">5、选择要合并的分支</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#6、合并完成"><span class="toc-text">6、合并完成</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#7、合并成功后，把master推送到远程"><span class="toc-text">7、合并成功后，把master推送到远程</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、基本操作总结："><span class="toc-text">7、基本操作总结：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、状态查看操作"><span class="toc-text">1、状态查看操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、添加操作"><span class="toc-text">2、添加操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、提交操作"><span class="toc-text">3、提交操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、查看历史记录"><span class="toc-text">4、查看历史记录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、使用命令查看当前命令有哪些可用属性"><span class="toc-text">5、使用命令查看当前命令有哪些可用属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、删除已提交文件并找回"><span class="toc-text">6、删除已提交文件并找回</span></a></li></ol></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> No one can make me lose unless I don&#39;t want to win! </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        git-learn
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2020-03-27 16:38:44</span></span>
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><h3 id="1、git下载连接"><a href="#1、git下载连接" class="headerlink" title="1、git下载连接"></a>1、<a href="https://npm.taobao.org/mirrors/git-for-windows/" target="_blank" rel="noopener">git下载连接</a></h3><h3 id="2、git安装步骤"><a href="#2、git安装步骤" class="headerlink" title="2、git安装步骤"></a>2、git安装步骤</h3><h3 id="3、初始化git仓库"><a href="#3、初始化git仓库" class="headerlink" title="3、初始化git仓库"></a>3、初始化git仓库</h3><h4 id="1、初始化操作"><a href="#1、初始化操作" class="headerlink" title="1、初始化操作"></a>1、初始化操作</h4><ul>
+<li><p>命令：</p>
+<ul>
+<li><p>git init</p>
+</li>
+<li><p>git init newrepo(自定义命名)    </p>
+<p>初始化后,会在newrepo目录下出现一个名为.git的目录,所有Git需要的数据和资源都存放在这个目录中</p>
+</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE1.png" alt="效果图1"></p>
+</li>
+</ul>
+<h4 id="2、注意："><a href="#2、注意：" class="headerlink" title="2、注意："></a>2、注意：</h4><p>.<strong>git目录中存放的是本地仓库相关的子目录和文件，不要删除和随意修改</strong></p>
+<h4 id="3、设置签名"><a href="#3、设置签名" class="headerlink" title="3、设置签名"></a>3、设置签名</h4><ul>
+<li><p>形式：</p>
+<ul>
+<li>用户名：xm</li>
+<li>Email地址：<a href="mailto:goodMorning@xm.com">goodMorning@xm.com</a></li>
+</ul>
+</li>
+<li><p>作用：区分不同开发人员的身份</p>
+</li>
+<li><p>辨析：这里设置的签名和登录远程库(代码托管中心)的账号、密码没有任何关系。</p>
+</li>
+<li><p>命令</p>
+<ul>
+<li><p>项目级别/仓库级别：仅在当前本地范围内有效</p>
+<ul>
+<li><p>git ==config== user.name xm_pro</p>
+</li>
+<li><p>git ==config== user.email <a href="mailto:goodMorning_pro@xm.com">goodMorning_pro@xm.com</a></p>
+</li>
+<li><p>信息文件保存位置：./.git/config文件</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE2.png" alt="效果图2"></p>
+</li>
+</ul>
+</li>
+<li><p>系统用户级别：登录当前操作系统的用户范围</p>
+<ul>
+<li><p>git config ==–global== user.name xm_glb</p>
+</li>
+<li><p>git config ==–global== user.email <a href="mailto:goodMorning_glb@xm.com">goodMorning_glb@xm.com</a></p>
+</li>
+<li><p>信息文件保存位置：~/.gitconfig文件</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE3.png" alt="效果图3"></p>
+</li>
+</ul>
+</li>
+<li><p>级别优先级：</p>
+<ul>
+<li>就近原则：项目级别优先于系统用户级别；二者都有时采用项目级别的签名</li>
+<li>如果只有系统级别的签名，就以系统用户级别的签名为准</li>
+<li>二者都没有不允许</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4、git版本控制操作"><a href="#4、git版本控制操作" class="headerlink" title="4、git版本控制操作"></a>4、git版本控制操作</h3><h4 id="1、添加提交以及查看状态操作"><a href="#1、添加提交以及查看状态操作" class="headerlink" title="1、添加提交以及查看状态操作"></a>1、添加提交以及查看状态操作</h4><h5 id="1、查看当前仓库状态"><a href="#1、查看当前仓库状态" class="headerlink" title="1、查看当前仓库状态"></a>1、查看当前仓库状态</h5><ul>
+<li><p>命令：git status</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE4.png" alt="效果图4"></p>
+</li>
+</ul>
+<h5 id="2、新建文件，再次查看仓库状态"><a href="#2、新建文件，再次查看仓库状态" class="headerlink" title="2、新建文件，再次查看仓库状态"></a>2、新建文件，再次查看仓库状态</h5><ul>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE5.png" alt="效果图5"></p>
+</li>
+</ul>
+<h5 id="3、将文件修改添加到暂存区中"><a href="#3、将文件修改添加到暂存区中" class="headerlink" title="3、将文件修改添加到暂存区中"></a>3、将文件修改添加到暂存区中</h5><ul>
+<li><p>命令：git add 文件名</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE6.png" alt="效果图6"></p>
+</li>
+</ul>
+<h5 id="4、再次查看仓库状态"><a href="#4、再次查看仓库状态" class="headerlink" title="4、再次查看仓库状态"></a>4、再次查看仓库状态</h5><ul>
+<li><p>效果图</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE7.png" alt="效果图7"></p>
+</li>
+</ul>
+<h5 id="5、将文件从暂存区提交到本地仓库"><a href="#5、将文件从暂存区提交到本地仓库" class="headerlink" title="5、将文件从暂存区提交到本地仓库"></a>5、将文件从暂存区提交到本地仓库</h5><ul>
+<li><p>命令：git commit 文件名</p>
+<ul>
+<li><p>它会自动调用vim编辑器，让你记录本次修改的说明信息</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE9.png" alt="效果图9"></p>
+</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE10.png" alt="效果图10"></p>
+</li>
+</ul>
+<h4 id="2、将文件从缓存区中移除"><a href="#2、将文件从缓存区中移除" class="headerlink" title="2、将文件从缓存区中移除"></a>2、将文件从缓存区中移除</h4><ul>
+<li><p>命令：git rm –cached 文件名</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE8.png" alt="效果图8"></p>
+</li>
+</ul>
+<h4 id="3、修改成功提交后的文件情况"><a href="#3、修改成功提交后的文件情况" class="headerlink" title="3、修改成功提交后的文件情况"></a>3、修改成功提交后的文件情况</h4><h5 id="1、修改文件后，查看状态"><a href="#1、修改文件后，查看状态" class="headerlink" title="1、修改文件后，查看状态"></a>1、修改文件后，查看状态</h5><ul>
+<li><p>命令：vim 文件名</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE11.png" alt="效果图11"></p>
+</li>
+</ul>
+<h5 id="2、将修改后的文件添加到暂存区，查看状态"><a href="#2、将修改后的文件添加到暂存区，查看状态" class="headerlink" title="2、将修改后的文件添加到暂存区，查看状态"></a>2、将修改后的文件添加到暂存区，查看状态</h5><ul>
+<li><p>命令：git add 文件名</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE12.png" alt="效果图12"></p>
+</li>
+</ul>
+<h5 id="3、将暂存区的文件提交"><a href="#3、将暂存区的文件提交" class="headerlink" title="3、将暂存区的文件提交"></a>3、将暂存区的文件提交</h5><ul>
+<li><p>命令：（两者选其一即可）</p>
+<ul>
+<li>git commit -m “填修改后提交的说明信息” 文件名  （此命令可以跳过vim编辑步骤）</li>
+<li>git commit 文件名</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE13.png" alt="效果图13"></p>
+</li>
+</ul>
+<h4 id="4、版本的前进和后退"><a href="#4、版本的前进和后退" class="headerlink" title="4、版本的前进和后退"></a>4、版本的前进和后退</h4><h5 id="1、查看历史版本"><a href="#1、查看历史版本" class="headerlink" title="1、查看历史版本"></a>1、查看历史版本</h5><ul>
+<li><p>命令：</p>
+<ul>
+<li>git log</li>
+<li>git log –pretty=oneline</li>
+<li>git log –oneline</li>
+<li>git reflog</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE14.png" alt="效果图14"></p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE15.png" alt="效果图15"></p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE16.png" alt="效果图16"></p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE17.png" alt="效果图17"></p>
+</li>
+</ul>
+<h5 id="2、前进后退版本"><a href="#2、前进后退版本" class="headerlink" title="2、前进后退版本"></a>2、前进后退版本</h5><ul>
+<li><p>本质：操作HEAD指针，进行前进后退</p>
+</li>
+<li><p>基于索引值操作（可前进/回退）[==推荐==]</p>
+<ul>
+<li><p>命令：</p>
+<ul>
+<li>git reflog</li>
+<li>git reset –hard [版本号索引hash值]</li>
+<li>操作：先查询历史版本，使用hash索引回退到指定版本</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE18.png" alt="效果图18"></p>
+</li>
+</ul>
+</li>
+<li><p>使用^符号（只能回退，不能前进）</p>
+<ul>
+<li><p>命令：</p>
+<ul>
+<li>git reset –hard HEAD^</li>
+<li>操作：多少个异或符号^，指针就移动多少步</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE19.png" alt="效果图19"></p>
+</li>
+</ul>
+</li>
+<li><p>使用~符号（只能后退，不能前进）</p>
+<ul>
+<li><p>命令：</p>
+<ul>
+<li>git reset –hard HEAD~2</li>
+<li>操作：波浪线后加上数字，代表回退几个版本；（缓解^符号的尴尬）</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE20.png" alt="效果图20"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="3、reset命令的三个参数对比"><a href="#3、reset命令的三个参数对比" class="headerlink" title="3、reset命令的三个参数对比"></a>3、reset命令的三个参数对比</h5><ul>
+<li><p>–soft 参数</p>
+<ul>
+<li><p>仅仅在本地库移动HEAD指针</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE21.png" alt="效果图21"></p>
+</li>
+</ul>
+</li>
+<li><p>–mixed 参数</p>
+<ul>
+<li><p>在本地库移动HEAD指针</p>
+</li>
+<li><p>重置暂存区（index tree）</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE22.png" alt="效果图22"></p>
+</li>
+</ul>
+</li>
+<li><p>–hard 参数</p>
+<ul>
+<li>在本地库移动HEAD指针</li>
+<li>重置暂存区（index tree）</li>
+<li>重置工作区（working tree）</li>
+</ul>
+</li>
+<li><p>假设本地库与暂存区或工作区的内容不相符（版本号内容不相符）可用以下命令重置</p>
+<ul>
+<li>命令：<ul>
+<li>git reset –hard HEAD</li>
+<li>操作：移动指针，重置暂存区和工作区</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="5、永久删除已提交文件后找回"><a href="#5、永久删除已提交文件后找回" class="headerlink" title="5、永久删除已提交文件后找回"></a>5、永久删除已提交文件后找回</h4><h5 id="1、删除已提交文件"><a href="#1、删除已提交文件" class="headerlink" title="1、删除已提交文件"></a>1、删除已提交文件</h5><ul>
+<li><p>命令：</p>
+<ul>
+<li>rm 文件名</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE23.png" alt="效果图23"></p>
+</li>
+</ul>
+<h5 id="2、文件找回："><a href="#2、文件找回：" class="headerlink" title="2、文件找回："></a>2、文件找回：</h5><ul>
+<li>情况一：<ul>
+<li>命令：<ul>
+<li>git reset –hard [文件未被删除的hash版本号]</li>
+<li>操作：回退到文件未被删除的版本</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>效果图：</li>
+</ul>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE24.png" alt="效果图24"></p>
+<ul>
+<li><p>情况二：</p>
+<ul>
+<li><p>命令：</p>
+<ul>
+<li>git reset –hard HEAD</li>
+<li>操作：指针在新建文件的版本下，删除文件过程只到添加到暂存区，可用此命令（–hard重置(刷新)暂存区、工作区，并移动指针到此版本下）</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE25.png" alt="效果图25"></p>
+</li>
+</ul>
+</li>
+<li><p>==小结==：</p>
+<ul>
+<li>两种情况也说明 ==–hard== 属性的功能，移动指针、重置暂存区、重置工作区。</li>
+</ul>
+</li>
+</ul>
+<h4 id="6、比较文件差异"><a href="#6、比较文件差异" class="headerlink" title="6、比较文件差异"></a>6、比较文件差异</h4><ul>
+<li><p>命令：</p>
+<ul>
+<li><p>git diff [文件名]</p>
+</li>
+<li><p>操作：将工作区中的文件和暂存区进行比较</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE26.png" alt="效果图26"></p>
+</li>
+<li><p>git diff [本地库历史版本] [文件名]</p>
+</li>
+<li><p>操作：将工作区中的文件和本地库历史记录比较</p>
+</li>
+<li><p>效果图;</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE27.png" alt="效果图27"></p>
+</li>
+<li><p>git diff [本地库历史版本]</p>
+</li>
+<li><p>操作：不带文件名可以比较当前工作区多个文件</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE28.png" alt="效果图28"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="7、分支管理"><a href="#7、分支管理" class="headerlink" title="7、分支管理"></a>7、分支管理</h4><h5 id="1、什么是分支？"><a href="#1、什么是分支？" class="headerlink" title="1、什么是分支？"></a>1、什么是分支？</h5><ul>
+<li><p>在版本控制过程中，使用多条线同时推进多个任务。</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE29.png" alt="效果图29"></p>
+</li>
+</ul>
+<h5 id="2、分支的好处？"><a href="#2、分支的好处？" class="headerlink" title="2、分支的好处？"></a>2、分支的好处？</h5><ul>
+<li>同时并行推进多个功能开发，提高开发效率。</li>
+<li>各个分支在开发过程中，如果某一个分支开发失败，不会对其他分支有任何影响。失败的分支删除重新开始即可。</li>
+</ul>
+<h5 id="3、分支操作"><a href="#3、分支操作" class="headerlink" title="3、分支操作"></a>3、分支操作</h5><ul>
+<li><p>创建分支：git branch [分支名]</p>
+</li>
+<li><p>查看分支：git branch -v</p>
+</li>
+<li><p>切换分支：git checkout [分支名]</p>
+</li>
+<li><p>合并分支</p>
+<ul>
+<li>==第一步==：切换到接受修改的分支（被合并、增加新内容）上<ul>
+<li>命令：git checkout [被合并分支名]</li>
+</ul>
+</li>
+<li>==第二步==：执行merge命令<ul>
+<li>命令：git merge [有新内容分支名]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>解决冲突</p>
+<ul>
+<li><p>冲突的表现</p>
+<ul>
+<li><p>前提：两个分支修改同一个文件，然后合并。</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE30.png" alt="效果图30"></p>
+</li>
+</ul>
+</li>
+<li><p>冲突的解决</p>
+<ul>
+<li>第一步：编辑文件，删除特殊符号</li>
+<li>第二步：把文件修改到满意的程度，保存退出</li>
+<li>第三步：git add [文件名]</li>
+<li>第四步：git commit -m “日志信息”<ul>
+<li>==注意==：此时commit一定不能带具体文件名</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="5、git基本原理"><a href="#5、git基本原理" class="headerlink" title="5、git基本原理"></a>5、git基本原理</h3><h4 id="1、哈希"><a href="#1、哈希" class="headerlink" title="1、哈希"></a>1、哈希</h4><ul>
+<li>哈希是一个系列的加密算法，各个不同的哈希算法虽然加密强度不同，但是有以下几个共同点：</li>
+</ul>
+<ol>
+<li>不管输入数据的数据量有多大，输入同一个哈希算法，得到的加密结果长度固定</li>
+<li>哈希算法确定，输入数据确定，输出数据能够保证不变</li>
+<li>哈希算法确定，输入数据有变化，输出数据一定有变化，而且通常变化很大</li>
+<li>哈希算法不可逆</li>
+</ol>
+<ul>
+<li><p>哈希算法可以被用来验证文件。原理如下图所示：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE32.png" alt="效果图32"></p>
+</li>
+</ul>
+<h4 id="2、Git保存版本的机制"><a href="#2、Git保存版本的机制" class="headerlink" title="2、Git保存版本的机制"></a>2、Git保存版本的机制</h4><h5 id="1、集中式版本控制工具的文件管理机制"><a href="#1、集中式版本控制工具的文件管理机制" class="headerlink" title="1、集中式版本控制工具的文件管理机制"></a>1、集中式版本控制工具的文件管理机制</h5><ul>
+<li><p>以文件变更列表的方式存储信息。这类系统将它们保存的信息看作是一组基本文件和每个文件随时间逐步累积的差异。</p>
+</li>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE33.png" alt="效果图32"></p>
+</li>
+</ul>
+<h5 id="2、Git-的文件管理机制"><a href="#2、Git-的文件管理机制" class="headerlink" title="2、Git 的文件管理机制"></a>2、Git 的文件管理机制</h5><ul>
+<li><p>Git把数据看作是小型文件系统的一组快照。每次提交更新时Git都会对当前的全部文件制作一个快照并保存这个快照的索引。为了高效，如果文件没有修改，Git不会重新存储该文件，而是只保留一个链接指向之前存储的文件。所以Git的工作方式可以称之为快照流。</p>
+</li>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE34.png" alt="效果图34"></p>
+</li>
+</ul>
+<h5 id="3、Git-的-”提交对象“"><a href="#3、Git-的-”提交对象“" class="headerlink" title="3、Git 的 ”提交对象“"></a>3、Git 的 ”提交对象“</h5><ul>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE35.png" alt="效果图35"></p>
+</li>
+<li><p>提交对象及其父对象形成的链条</p>
+</li>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE36.png" alt="效果图36"></p>
+</li>
+</ul>
+<h4 id="3、Git分支管理机制"><a href="#3、Git分支管理机制" class="headerlink" title="3、Git分支管理机制"></a>3、Git分支管理机制</h4><h5 id="1、分支的创建"><a href="#1、分支的创建" class="headerlink" title="1、分支的创建"></a>1、分支的创建</h5><ul>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE37.png" alt="效果图37"></p>
+</li>
+</ul>
+<h5 id="2、分支的切换"><a href="#2、分支的切换" class="headerlink" title="2、分支的切换"></a>2、分支的切换</h5><ul>
+<li><p>流程图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE38.png" alt="效果图38"></p>
+<hr>
+
+</li>
+</ul>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE39.png" alt="效果图39"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE40.png" alt="效果图40"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE41.png" alt="效果图41"></p>
+<h5 id="4、知识点小结："><a href="#4、知识点小结：" class="headerlink" title="4、知识点小结："></a>4、知识点小结：</h5><ul>
+<li>Git 管理效率之所以高，有以下两个优点：<ul>
+<li>文件版本管理就是一个链条</li>
+<li>在链条之上<ul>
+<li>创建分支只是创建新的指针</li>
+<li>切换分支只是切换指针指向的位置</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="6、Git-本地库连接远程库"><a href="#6、Git-本地库连接远程库" class="headerlink" title="6、Git 本地库连接远程库"></a>6、Git 本地库连接远程库</h3><h4 id="1、代码托管流程图"><a href="#1、代码托管流程图" class="headerlink" title="1、代码托管流程图"></a>1、代码托管流程图</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE42.png" alt="效果图42"></p>
+<h4 id="2、创建本地库"><a href="#2、创建本地库" class="headerlink" title="2、创建本地库"></a>2、创建本地库</h4><h4 id="3、创建远程库"><a href="#3、创建远程库" class="headerlink" title="3、创建远程库"></a>3、创建远程库</h4><ul>
+<li><p>操作指南：</p>
+<ul>
+<li><p>第一步</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE43.png" alt="效果图43"></p>
+</li>
+<li><p>第二步</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE44.png" alt="效果图44"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4、在本地创建远程库地址别名"><a href="#4、在本地创建远程库地址别名" class="headerlink" title="4、在本地创建远程库地址别名"></a>4、在本地创建远程库地址别名</h4><ul>
+<li><p>第一步：复制远程库地址</p>
+</li>
+<li><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE45.png" alt="效果图45"></p>
+</li>
+<li><p>第二步：添加别名</p>
+<ul>
+<li>命令：git remote add [别名] [远程仓库地址]</li>
+</ul>
+</li>
+<li><p>第三步：查看远程仓库别名</p>
+<ul>
+<li>命令：git remote -v</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE46.png" alt="效果图46"></p>
+</li>
+</ul>
+<h4 id="5、推送操作"><a href="#5、推送操作" class="headerlink" title="5、推送操作"></a>5、推送操作</h4><ul>
+<li><p>命令：git push [地址别名] [本地仓库分支名称]</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE47.png" alt="效果图47"></p>
+</li>
+</ul>
+<h4 id="6、克隆操作"><a href="#6、克隆操作" class="headerlink" title="6、克隆操作"></a>6、克隆操作</h4><ul>
+<li><p>命令：git clone [远程仓库地址]</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE48.png" alt="效果图48"></p>
+</li>
+<li><p>==此操作会产生三个效果：==</p>
+<ul>
+<li>完整的把远程库下载到本地</li>
+<li>创建origin远程地址别名</li>
+<li>初始化本地库</li>
+</ul>
+</li>
+</ul>
+<h4 id="7、邀请组员加入团队"><a href="#7、邀请组员加入团队" class="headerlink" title="7、邀请组员加入团队"></a>7、邀请组员加入团队</h4><ul>
+<li><p>前提：当别人克隆了你的项目时，他修改了，要push，会出现==403==，无权限推送。需要你手动添加成员（添加权限）</p>
+</li>
+<li><p>添加成员操作：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE49.png" alt="效果图49"></p>
+</li>
+</ul>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE50.png" alt="效果图50"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE51.png" alt="效果图51"></p>
+<h4 id="8、远程库修改的拉取（pull-fetch-merge）"><a href="#8、远程库修改的拉取（pull-fetch-merge）" class="headerlink" title="8、远程库修改的拉取（pull = fetch + merge）"></a>8、远程库修改的拉取（pull = fetch + merge）</h4><h5 id="1、fetch"><a href="#1、fetch" class="headerlink" title="1、fetch"></a>1、fetch</h5><ul>
+<li><p>命令：git fetch [远程库地址别名] [需要拉取远程库的分支名称]</p>
+</li>
+<li><p>操作：只是将本人远程库文件下载下来，并没有合并。[远程库地址别名] [需要拉取远程库的分支名称]也就是分支名称：origin/master</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE52.png" alt="效果图52"></p>
+<ul>
+<li><p>想要查看下载下来的内容，可切换分支查看</p>
+</li>
+<li><p>命令：git checkout [远程库地址别名] [远程分支名]</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE53.png" alt="效果图53"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="2、merge"><a href="#2、merge" class="headerlink" title="2、merge"></a>2、merge</h5><ul>
+<li><p>命令：git merge [远程库地址别名]/[远程分支名]</p>
+</li>
+<li><p>操作：将新内容（fetch下来的分支）的分支合并。[远程库地址别名] [需要拉取远程库的分支名称]也就是分支名称：origin/master</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE54.png" alt="效果图54"></p>
+</li>
+</ul>
+<h5 id="3、直接pull"><a href="#3、直接pull" class="headerlink" title="3、直接pull"></a>3、直接pull</h5><ul>
+<li><p>命令：git pull [远程库地址别名] [远程分支名]</p>
+</li>
+<li><p>操作：直接拉取并将两个版本合并（小的修改，不会产生冲突情况下可使用）。</p>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE55.png" alt="效果图55"></p>
+</li>
+</ul>
+<h4 id="9、协同开发时的冲突解决"><a href="#9、协同开发时的冲突解决" class="headerlink" title="9、协同开发时的冲突解决"></a>9、协同开发时的冲突解决</h4><h5 id="1、产生冲突"><a href="#1、产生冲突" class="headerlink" title="1、产生冲突"></a>1、产生冲突</h5><ul>
+<li><p>==要点：==</p>
+<ul>
+<li>如果不是基于GitHub远程库的最新版所做的修改，不能推送，必须先拉取。</li>
+<li>拉取下来后如果进入冲突状态，则按照 “分支冲突解决” 操作解决即可。</li>
+</ul>
+</li>
+<li><p>效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE56.png" alt="效果图56"></p>
+</li>
+</ul>
+<h5 id="2、解决冲突（与解决分支冲突一样）"><a href="#2、解决冲突（与解决分支冲突一样）" class="headerlink" title="2、解决冲突（与解决分支冲突一样）"></a>2、解决冲突（与解决分支冲突一样）</h5><ul>
+<li>第一步：编辑文件，删除特殊符号</li>
+<li>第二步：把文件修改到满意的程度，保存退出</li>
+<li>第三步：git add [文件名]</li>
+<li>第四步：git commit -m “日志信息”<ul>
+<li>==注意==：此时commit一定不能带具体文件名</li>
+</ul>
+</li>
+<li>第五步：git push [远程库地址别名] [远程分支名]</li>
+</ul>
+<h4 id="10、跨团队协作操作演示"><a href="#10、跨团队协作操作演示" class="headerlink" title="10、跨团队协作操作演示"></a>10、跨团队协作操作演示</h4><ul>
+<li><p>跨团队协作流程图</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE57.png" alt="效果图57"></p>
+</li>
+<li><p><strong>==第三者==操作指南：</strong></p>
+<ul>
+<li><p>此处省略了clone 和 push</p>
+</li>
+<li><p>Fork</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE58.png" alt="效果图58"></p>
+<ul>
+<li><p>Fork完成后的效果图：</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE59.png" alt="效果图59"></p>
+</li>
+</ul>
+</li>
+<li><p>本地修改，然后推送到远程库</p>
+</li>
+<li><p>pull request </p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE60.png" alt="效果图60"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE61.png" alt="效果图61"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE62.png" alt="效果图62"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE63.png" alt="效果图63"></p>
+</li>
+</ul>
+</li>
+<li><p><strong>==第一者==操作指南：</strong></p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE64.png" alt="效果图64"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE65.png" alt="效果图65"></p>
+<ul>
+<li><p>对代码进行审核</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE67.png" alt="效果图67"></p>
+</li>
+<li><p>审核代码无误后，合并代码（==慎！==）</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE68.png" alt="效果图68"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE69.png" alt="效果图69"></p>
+</li>
+<li><p>对话</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE66.png" alt="效果图66"></p>
+</li>
+<li><p>将远程库修改拉取到本地（结束本次跨团队协作）</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE70.png" alt="效果图70"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="7、SSH免密码登录"><a href="#7、SSH免密码登录" class="headerlink" title="7、SSH免密码登录"></a>7、SSH免密码登录</h3><ul>
+<li>进入当前用户的主目录<ul>
+<li>命令：cd ~</li>
+</ul>
+</li>
+<li>删除.ssh目录<ul>
+<li>命令：rm -rvf .ssh</li>
+</ul>
+</li>
+<li>运行命令生成.ssh密钥目录<ul>
+<li>命令：ssh-keygen -t rsa -C [邮箱地址]</li>
+<li>[==注意：这里-C 这个参数是大写的C==]</li>
+</ul>
+</li>
+<li>进入.ssh目录查看文件列表<ul>
+<li>命令：<ul>
+<li>cd .ssh</li>
+<li>ls -lF</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>查看id_rsa.pub文件内容<ul>
+<li>命令：cat id_rsa.pub</li>
+</ul>
+</li>
+<li>复制id_rsa.pub文件内容，登录GitHub，点击用户头像→Setting→SSH and GPG keys→New SSH Key</li>
+<li>输入复制的密钥信息</li>
+<li>回到Git bash创建ssh远程地址别名<ul>
+<li>命令：git remote add [别名] [远程库ssh地址]</li>
+</ul>
+</li>
+<li>即可使用远程库ssh别名进行push（免登录）</li>
+</ul>
+<h3 id="8、Eclipse中Git插件使用"><a href="#8、Eclipse中Git插件使用" class="headerlink" title="8、Eclipse中Git插件使用"></a>8、Eclipse中Git插件使用</h3><h4 id="1、简介"><a href="#1、简介" class="headerlink" title="1、简介"></a>1、简介</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE71.png" alt="效果图71"></p>
+<h4 id="2、Eclipse中把工程初始化为本地库"><a href="#2、Eclipse中把工程初始化为本地库" class="headerlink" title="2、Eclipse中把工程初始化为本地库"></a>2、Eclipse中把工程初始化为本地库</h4><ul>
+<li><p>操作：工程→右键→Team→Share Project→Git</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE72.png" alt="效果图72"></p>
+</li>
+<li><p>Create Repository</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE73.png" alt="效果图73"></p>
+</li>
+<li><p>Finish</p>
+</li>
+</ul>
+<h4 id="3、在Eclipse中设置本地库范围签名"><a href="#3、在Eclipse中设置本地库范围签名" class="headerlink" title="3、在Eclipse中设置本地库范围签名"></a>3、在Eclipse中设置本地库范围签名</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE74.png" alt="效果图74"></p>
+<h4 id="4、Eclipse中Git图标的介绍"><a href="#4、Eclipse中Git图标的介绍" class="headerlink" title="4、Eclipse中Git图标的介绍"></a>4、Eclipse中Git图标的介绍</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE75.png" alt="效果图75"></p>
+<h4 id="5、Eclipse特定文件介绍以及为什么要忽略他们"><a href="#5、Eclipse特定文件介绍以及为什么要忽略他们" class="headerlink" title="5、Eclipse特定文件介绍以及为什么要忽略他们"></a>5、Eclipse特定文件介绍以及为什么要忽略他们</h4><ul>
+<li><p>操作：项目右键→Team→commit</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE76.png" alt="效果图76"></p>
+</li>
+</ul>
+<h5 id="1、Eclipse-中忽略文件"><a href="#1、Eclipse-中忽略文件" class="headerlink" title="1、Eclipse 中忽略文件"></a>1、Eclipse 中忽略文件</h5><ul>
+<li>概念：Eclipse 特定文件<ul>
+<li>这些都是Eclipse 为了管理我们创建的工程而维护的文件，和开发的代码没有直接关系。最好不要在Git中进行追踪，也就是把它们忽略。</li>
+<li>.classpath 文件</li>
+<li>.project 文件</li>
+<li>.settings 目录下所有文件</li>
+</ul>
+</li>
+</ul>
+<h5 id="2、为什么要忽略Eclipse-特定文件呢？"><a href="#2、为什么要忽略Eclipse-特定文件呢？" class="headerlink" title="2、为什么要忽略Eclipse 特定文件呢？"></a>2、为什么要忽略Eclipse 特定文件呢？</h5><ul>
+<li>同一个团队中很难保证大家使用相同的IDE工具，而IDE工具不同时，相关工程特定文件就有可能不同。如果这些文件加入版本控制，那么开发时很可能需要为了这些文件解决冲突。</li>
+</ul>
+<h4 id="6、忽略Eclipse-中的特定文件"><a href="#6、忽略Eclipse-中的特定文件" class="headerlink" title="6、忽略Eclipse 中的特定文件"></a>6、忽略Eclipse 中的特定文件</h4><h5 id="1、查看git官方忽略机制文档"><a href="#1、查看git官方忽略机制文档" class="headerlink" title="1、查看git官方忽略机制文档"></a>1、查看git官方忽略机制文档</h5><ul>
+<li><a href="https://github.com/github/gitignore" target="_blank" rel="noopener">忽略机制文档（所有语言）</a></li>
+<li><a href="https://github.com/github/gitignore/blob/master/Java.gitignore" target="_blank" rel="noopener">java忽略机制文档</a></li>
+</ul>
+<h5 id="2、创建一个后缀名为-gitignore-的文档文件"><a href="#2、创建一个后缀名为-gitignore-的文档文件" class="headerlink" title="2、创建一个后缀名为 .gitignore 的文档文件"></a>2、创建一个后缀名为 .gitignore 的文档文件</h5><ul>
+<li>此文件位置与用户的git全局配置文件.gitconfig同一路径下（文件路径自定义）</li>
+<li>添加官方文档的忽略机制</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Compiled class file</span></span><br><span class="line"><span class="attr">*.class</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Log file</span></span><br><span class="line"><span class="attr">*.log</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># BlueJ files</span></span><br><span class="line"><span class="attr">*.ctxt</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Mobile Tools for Java (J2ME)</span></span><br><span class="line"><span class="attr">.mtj.tmp/</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Package Files #</span></span><br><span class="line"><span class="attr">*.jar</span></span><br><span class="line"><span class="attr">*.war</span></span><br><span class="line"><span class="attr">*.nar</span></span><br><span class="line"><span class="attr">*.ear</span></span><br><span class="line"><span class="attr">*.zip</span></span><br><span class="line"><span class="attr">*.tar.gz</span></span><br><span class="line"><span class="attr">*.rar</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml</span></span><br><span class="line"><span class="attr">hs_err_pid*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 自定义补全，忽略Eclipse工程特定文件以及target下编译的二进制文件（git不会对二进制版本做管理）</span></span><br><span class="line"><span class="attr">.classpath</span></span><br><span class="line"><span class="attr">.project</span></span><br><span class="line"><span class="attr">.settings</span></span><br><span class="line"><span class="attr">target</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在~/.gitconfig 文件中引入上述文件</li>
+</ul>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">[core]</span></span><br><span class="line">	<span class="attr">excludesfile</span> = <span class="string">C:/Users/Administrator/Java.gitignore</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[==注意：==这里路径中一定要使用 ==“/”==，不能使用 ==”&quot;==]</li>
+</ul>
+<h4 id="7、Eclipse-中本地库基本操作"><a href="#7、Eclipse-中本地库基本操作" class="headerlink" title="7、Eclipse 中本地库基本操作"></a>7、Eclipse 中本地库基本操作</h4><ul>
+<li>项目右键→Team→Add to Index（可见文件变成绿色+号（刚添加到暂存区），文件夹带星号（添加到了暂存区））</li>
+<li>项目右键→Team→commit（可见所有文件都被添加到暂存的修改）</li>
+<li>填写提交的日志信息</li>
+<li>commit 即可提交到本地库</li>
+</ul>
+<h4 id="8、将本地工程推送到远程库"><a href="#8、将本地工程推送到远程库" class="headerlink" title="8、将本地工程推送到远程库"></a>8、将本地工程推送到远程库</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE77.png" alt="效果图77"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE78.png" alt="效果图78"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE79.png" alt="效果图79"></p>
+<hr>
+
+<p><img src="/post/202003271638/%5C%E6%95%88%E6%9E%9C%E5%9B%BE80.png" alt="效果图80"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE81.png" alt="效果图81"></p>
+<h4 id="9、将远程库的工程克隆到本地"><a href="#9、将远程库的工程克隆到本地" class="headerlink" title="9、将远程库的工程克隆到本地"></a>9、将远程库的工程克隆到本地</h4><h5 id="1、Oxygen-Eclipse-克隆工程操作（高版本）"><a href="#1、Oxygen-Eclipse-克隆工程操作（高版本）" class="headerlink" title="1、Oxygen Eclipse 克隆工程操作（高版本）"></a>1、Oxygen Eclipse 克隆工程操作（高版本）</h5><ul>
+<li><p>import…导入工程</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE82.png" alt="效果图82"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE83.png" alt="效果图83"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE85.png" alt="效果图85"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE86.png" alt="效果图86"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE87.png" alt="效果图87"></p>
+<hr>
+
+<ul>
+<li>将普通工程转为maven工程</li>
+</ul>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE88.png" alt="效果图88"></p>
+</li>
+</ul>
+<h5 id="2、Kepler-Eclipse-克隆工程操作（低版本）"><a href="#2、Kepler-Eclipse-克隆工程操作（低版本）" class="headerlink" title="2、Kepler Eclipse 克隆工程操作（低版本）"></a>2、Kepler Eclipse 克隆工程操作（低版本）</h5><ul>
+<li>问题：不能保存到当前 Eclipse 工作区目录</li>
+<li>正确做法：保存到工作区以外的目录中</li>
+</ul>
+<h4 id="10、在Eclipse中解决冲突"><a href="#10、在Eclipse中解决冲突" class="headerlink" title="10、在Eclipse中解决冲突"></a>10、在Eclipse中解决冲突</h4><ul>
+<li>右键项目→Team→Merge Tool（合并工具）</li>
+<li>之后的操作步骤就与命令行的顺序一样了</li>
+</ul>
+<h3 id="9、Git-工作流"><a href="#9、Git-工作流" class="headerlink" title="9、Git 工作流"></a>9、Git 工作流</h3><h4 id="1、概念"><a href="#1、概念" class="headerlink" title="1、概念"></a>1、概念</h4><ul>
+<li>在项目开发过程中使用Git的方式</li>
+</ul>
+<h4 id="2、分类"><a href="#2、分类" class="headerlink" title="2、分类"></a>2、分类</h4><h5 id="1、集中式工作流"><a href="#1、集中式工作流" class="headerlink" title="1、集中式工作流"></a>1、集中式工作流</h5><ul>
+<li><p>像SVN一样，集中式工作流以中央仓库作为项目所有修改的单点实体。所有修改都提交到Master 这个分支上。</p>
+</li>
+<li><p>这种方式与SVN的主要区别就是开发人员有本地库。Git很多特性并没有用到。</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE89.png" alt="效果图89"></p>
+</li>
+</ul>
+<h5 id="2、GitFlow-工作流"><a href="#2、GitFlow-工作流" class="headerlink" title="2、GitFlow 工作流"></a>2、GitFlow 工作流</h5><ul>
+<li><p>GitFlow 工作流通过为功能开发、发布准备和维护设立了独立的分支，让发布迭代过程更流畅。严格的分支模型也为大型项目提供了一些非常必要的结构。</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE90.png" alt="效果图90"></p>
+</li>
+</ul>
+<h5 id="3、Forking-工作流"><a href="#3、Forking-工作流" class="headerlink" title="3、Forking 工作流"></a>3、Forking 工作流</h5><ul>
+<li><p>Forking 工作流是在GitFlow 基础上，充分利用了Git 的Fork 和 pull request 的功能以达到代码审核的目的。更适合安全可靠地管理大团队的开发者，而且能接受不信任贡献者的提交</p>
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE91.png" alt="效果图91"></p>
+</li>
+</ul>
+<h4 id="3、工作流举例"><a href="#3、工作流举例" class="headerlink" title="3、工作流举例"></a>3、工作流举例</h4><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE92.png" alt="效果图92"></p>
+<h4 id="4、分支实战操作"><a href="#4、分支实战操作" class="headerlink" title="4、分支实战操作"></a>4、分支实战操作</h4><h5 id="1、组员操作："><a href="#1、组员操作：" class="headerlink" title="1、组员操作："></a>1、组员操作：</h5><h6 id="1、创建分支"><a href="#1、创建分支" class="headerlink" title="1、创建分支"></a>1、创建分支</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE93.png" alt="效果图93"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE94.png" alt="效果图94"></p>
+<hr>
+
+<h6 id="2、提交到本地库"><a href="#2、提交到本地库" class="headerlink" title="2、提交到本地库"></a>2、提交到本地库</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE96.png" alt="效果图96"></p>
+<hr>
+
+<h6 id="3、推送分支hot-fix到远程库"><a href="#3、推送分支hot-fix到远程库" class="headerlink" title="3、推送分支hot_fix到远程库"></a>3、推送分支hot_fix到远程库</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE95.png" alt="效果图95"></p>
+<hr>
+
+<h5 id="2、组长操作："><a href="#2、组长操作：" class="headerlink" title="2、组长操作："></a>2、组长操作：</h5><h6 id="1、pull"><a href="#1、pull" class="headerlink" title="1、pull"></a>1、pull</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE97.png" alt="效果图97"></p>
+<h6 id="2、切换分支审查代码"><a href="#2、切换分支审查代码" class="headerlink" title="2、切换分支审查代码"></a>2、切换分支审查代码</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE98.png" alt="效果图98"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE99.png" alt="效果图99"></p>
+<hr>
+
+<p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE101.png" alt="效果图101"></p>
+<h6 id="3、切换回master"><a href="#3、切换回master" class="headerlink" title="3、切换回master"></a>3、切换回master</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE102.png" alt="效果图102"></p>
+<h6 id="4、合并分支"><a href="#4、合并分支" class="headerlink" title="4、合并分支"></a>4、合并分支</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE103.png" alt="效果图103"></p>
+<h6 id="5、选择要合并的分支"><a href="#5、选择要合并的分支" class="headerlink" title="5、选择要合并的分支"></a>5、选择要合并的分支</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE104.png" alt="效果图104"></p>
+<h6 id="6、合并完成"><a href="#6、合并完成" class="headerlink" title="6、合并完成"></a>6、合并完成</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE105.png" alt="效果图105"></p>
+<h6 id="7、合并成功后，把master推送到远程"><a href="#7、合并成功后，把master推送到远程" class="headerlink" title="7、合并成功后，把master推送到远程"></a>7、合并成功后，把master推送到远程</h6><p><img src="/post/202003271638/%E6%95%88%E6%9E%9C%E5%9B%BE106.png" alt="效果图106"></p>
+<h3 id="7、基本操作总结："><a href="#7、基本操作总结：" class="headerlink" title="7、基本操作总结："></a>7、基本操作总结：</h3><h4 id="1、状态查看操作"><a href="#1、状态查看操作" class="headerlink" title="1、状态查看操作"></a>1、状态查看操作</h4><ul>
+<li>命令：<ul>
+<li>git status</li>
+<li>作用：查看工作区、暂存区状态</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、添加操作"><a href="#2、添加操作" class="headerlink" title="2、添加操作"></a>2、添加操作</h4><ul>
+<li>命令：<ul>
+<li>git add [file name]</li>
+<li>作用：将工作区的 “新建/修改” 添加到暂存区</li>
+</ul>
+</li>
+</ul>
+<h4 id="3、提交操作"><a href="#3、提交操作" class="headerlink" title="3、提交操作"></a>3、提交操作</h4><ul>
+<li>命令：<ul>
+<li>git commit [file name]</li>
+<li>git commit -m “commit message” [file name]</li>
+<li>作用：将暂存区的内容提交到本地库</li>
+</ul>
+</li>
+</ul>
+<h4 id="4、查看历史记录"><a href="#4、查看历史记录" class="headerlink" title="4、查看历史记录"></a>4、查看历史记录</h4><ul>
+<li>命令：<ul>
+<li>git log</li>
+<li>git log –pretty=oneline</li>
+<li>git log –oneline</li>
+<li>git reflog</li>
+<li>作用：查看历史版本【其中git log只显示以前版本的历史记录；git reflog会显示所有版本历史记录以及指针移动记录】</li>
+</ul>
+</li>
+<li>多屏显示控制方式：<ul>
+<li>空格向下翻页</li>
+<li>b 向上翻页</li>
+<li>q 退出</li>
+</ul>
+</li>
+</ul>
+<h4 id="5、使用命令查看当前命令有哪些可用属性"><a href="#5、使用命令查看当前命令有哪些可用属性" class="headerlink" title="5、使用命令查看当前命令有哪些可用属性"></a>5、使用命令查看当前命令有哪些可用属性</h4><ul>
+<li>命令：<ul>
+<li>git help [具体命令]</li>
+<li>作用：查看具体命令的官方文档</li>
+</ul>
+</li>
+</ul>
+<h4 id="6、删除已提交文件并找回"><a href="#6、删除已提交文件并找回" class="headerlink" title="6、删除已提交文件并找回"></a>6、删除已提交文件并找回</h4><ul>
+<li>前提：删除前，文件存在时的状态提交到了本地库。</li>
+<li>命令：<ul>
+<li>git reset –hard [指针位置]</li>
+</ul>
+</li>
+<li>操作：<ul>
+<li>删除操作已经提交到本地库：指针位置指向历史记录</li>
+<li>删除操作尚未提交到本地库：指针位置使用HEAD</li>
+</ul>
+</li>
+</ul>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+        <li>
+            <a target="_blank" href="https://www.zhihu.com/people/尛铭">
+                            <span class="fa-stack fa-lg">
+                                 <i class="iconfont icon-zhihu"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+        
+
+        
+        <li>
+            <a target="_blank"  href="https://github.com/abmoming">
+                            <span class="fa-stack fa-lg">
+                                <i class="iconfont icon-github"></i>
+                            </span>
+            </a>
+        </li>
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>  Theme <a href="https://github.com/aircloud/hexo-theme-aircloud" target="_blank" rel="noopener">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
